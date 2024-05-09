@@ -9,11 +9,32 @@
   padding: 0;
   margin: 0;
   z-index: -1;
-  background-image: url(./assets/fundo.png);
+  background-image: url(./assets/fundo3.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   height: 100%; 
-
 }
+
+.bg1 {
+  padding: 0;
+  margin: 0;
+  z-index: -1;
+  background-image: url(./assets/fundo.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80rem; 
+}
+
+.bg2{
+  padding: 0;
+  margin: 0;
+  z-index: -1;
+  background-image: url(./assets/fundo2.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 

@@ -1,8 +1,11 @@
 import React from 'react';
-import Header from './header';
-import Titulo from './titulo';
-import Body from './body';
-import Footer from './footer';
+import Header from './PaginaPrincipal/header';
+import Titulo from './PaginaPrincipal/titulo';
+import Body from './PaginaPrincipal/body';
+import Footer from './PaginaPrincipal/footer';
+import QuemSomos from './QuemSomos/QuemSomos';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import AppRoutes from './routes';
 
 
 function App() {
@@ -15,6 +18,7 @@ function App() {
         <Header />
       <div className='h-4/5 sm:h-3/4'>
       <Body className="flex-grow"/>
+      <AppRoutes/>
      </div>
     </div>
       <Footer />

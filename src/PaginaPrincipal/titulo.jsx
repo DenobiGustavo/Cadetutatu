@@ -13,7 +13,7 @@ const Titulo = () => {
       <img src="/img/confgicon.png" alt="confgicon" className="flex w-[3rem] h-[3rem] mr-2"/>
     </div>
     
-    <div className="hidden bg-primary-blue sm:flex justify-between items-center w-full">
+    <div className="hidden bg-primary-blue sm:flex justify-between items-center w-full h-[8.5rem]">
       <img src="/img/logo.png" alt="logo" className="w-[6rem] h-[6rem] ml-2 sm:ml-6"/>
       <p className="text-white text-[1.8rem]">CadeTuTatu? - Gestão de Dados e Educação Ambiental</p>
       <img src="/img/confgicon.png" alt="confg" className="w-11 h-10 mr-6"/>
