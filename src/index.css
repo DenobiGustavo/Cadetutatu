@@ -34,4 +34,8 @@
   background-repeat: no-repeat;
 }
 
-
+.iframe-map {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
