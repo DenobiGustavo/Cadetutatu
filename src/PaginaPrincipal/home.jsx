@@ -4,17 +4,16 @@ import Titulo from './titulo';
 import Body from './body';
 import Footer from './footer';
 
-
 const Home = () => {
   return (
-    <div className="flex flex-col">
-     <div className="h-screen">
-        <div className='h-1/5 sm:h-1/5'>
-        <Titulo/>
-        </div>
+    <div className="bg flex flex-col">
+     <div className='h-screen'>
+        <div className='h-1/5'>
+        <Titulo className="pb-8"/>
         <Header />
-      <div className='h-4/5 sm:h-3/4'>
-      <Body className="flex-grow"/>
+        </div>
+      <div className="grid h-4/5">
+      <Body className="items-center justify-items-center flex flex-grow"/>
      </div>
     </div>
       <Footer />

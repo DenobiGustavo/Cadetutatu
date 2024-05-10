@@ -5,15 +5,15 @@ import Footer from "../PaginaPrincipal/footer";
 
 export const QuemSomos = () => {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col bg">
       <div>
         <div>
           <Titulo/>
         </div>
         <Header />
       </div>
-      <div className=" bg2">
-      <div className="bg1 flex flex-col items-center">
+      <div className="">
+      <div className="flex flex-col items-center">
         <div className="shadow-2xl bg-primary-blue grid grid-cols-2 justify-items-center items-center mt-40 w-[60rem] pt-20 pb-20 rounded-[4.5rem]">
           <img src="/img/logo.png" alt="" className="w-[16rem] h-[16rem]"/>
           <div className="text-white mr-[8rem] font-medium">
@@ -56,7 +56,7 @@ export const QuemSomos = () => {
             </div>
       </div>
 
-      <h1 className="font-sans font-bold text-[3.6rem] text-white text-center pt-[23.5rem]">Alunos</h1>
+      <h1 className="font-sans font-bold text-[3.6rem] text-white text-center pt-[11rem]">Alunos</h1>
 
 <div className="flex justify-center pt-[11rem] pb-[8.5rem]">
  <div className="shadow-2xl flex flex-col bg-primary-blue h-[30rem] w-[21rem] rounded-[2rem] justify-center items-center">

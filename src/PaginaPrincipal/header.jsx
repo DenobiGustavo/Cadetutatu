@@ -3,32 +3,32 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
-    <header className="bg-primary-green bg-opacity-80 text-white font-medium">
-      <div className="container mx-auto py-4">
+    <header className="bg-primary-green text-white font-medium">
+      <div className="container mx-auto py-5">
         <nav>
-          <ul className="flex space-x-8 items-center">
-            <li>
-              <Link to="/" className="hover:text-gray-300 text-lg">
+          <ul className="flex space-x-[9rem] items-center justify-center">
+            <li className='rounded-lg transition transform hover:scale-110'>
+              <Link to="/" className="w-[4rem] text-[1.3rem]">
                 Home
               </Link>
             </li>
-            <li>
-              <Link to="/quem-somos" className="hover:text-gray-300 text-lg">
+            <li className='rounded-lg transition transform hover:scale-110'>
+              <Link to="/quem-somos" className="w-[4rem] text-[1.3rem]">
                 Quem Somos
               </Link>
             </li>
-            <li>
-              <Link to="/dados" className="hover:text-gray-300 text-lg">
+            <li className='rounded-lg transition transform hover:scale-110'>
+              <Link to="/dados" className="w-[4rem] text-[1.3rem]">
                 Dados
               </Link>
             </li>
-            <li>
-              <Link to="/parceiro" className="hover:text-gray-300 text-lg">
+            <li className='rounded-lg transition transform hover:scale-110'>
+              <Link to="/parceiro" className="w-[4rem] text-[1.3rem]">
                 Seja um Parceiro
               </Link>
             </li>
-            <li>
-              <Link to="/administrativo" className="hover:text-gray-300 text-lg">
+            <li className='rounded-lg transition transform hover:scale-110'>
+              <Link to="/administrativo" className="w-[4rem] text-[1.3rem]">
                 Administrativo
               </Link>
             </li>
