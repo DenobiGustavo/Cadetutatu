@@ -8,9 +8,9 @@ const Home = () => {
   return (
     <div className="bg flex flex-col">
      <div className='h-screen'>
-        <div className='h-1/5'>
+        <div className='sm:h-1/5'>
         <Titulo className="pb-8"/>
-        <Header />
+        <Header/>
         </div>
       <div className="grid h-4/5">
       <Body className="items-center justify-items-center flex flex-grow"/>
