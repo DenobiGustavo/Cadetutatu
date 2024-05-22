@@ -5,7 +5,7 @@ import Footer from "../PaginaPrincipal/footer";
 
 export const QuemSomos = () => {
   return (
-    <div className="flex flex-col bg">
+    <div className="flex flex-col bg overflow-x-hidden">
       <div>
         <div>
           <Titulo/>
