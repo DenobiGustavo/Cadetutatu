@@ -13,8 +13,8 @@ const Header = () => {
               </Link>
             </li>
             <li className='rounded-lg transition transform hover:scale-110'>
-              <Link to="/quem-somos" className="w-[4rem] text-[1.3rem]">
-                Quem Somos
+              <Link to="/mapa" className="w-[4rem] text-[1.3rem]">
+                Mapa
               </Link>
             </li>
             <li className='rounded-lg transition transform hover:scale-110'>
@@ -23,8 +23,8 @@ const Header = () => {
               </Link>
             </li>
             <li className='rounded-lg transition transform hover:scale-110'>
-              <Link to="/parceiro" className="w-[4rem] text-[1.3rem]">
-                Seja um Parceiro
+              <Link to="/quem-somos" className="w-[4rem] text-[1.3rem]">
+                Quem Somos
               </Link>
             </li>
             <li className='rounded-lg transition transform hover:scale-110'>
