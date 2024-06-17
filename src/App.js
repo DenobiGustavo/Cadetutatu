@@ -3,6 +3,8 @@ import QuemSomos from "./QuemSomos/QuemSomos";
 import { createBrowserRouter } from 'react-router-dom';
 import Home from './PaginaPrincipal/home';
 import Mapa from './PaginaPrincipal/mapa';
+import Dados2 from './PaginaPrincipal/dados2';
+import Dados from './PaginaPrincipal/dados';
 
 export const router = createBrowserRouter([
   {
@@ -16,5 +18,9 @@ export const router = createBrowserRouter([
   {
     path: "mapa",
     element: <Mapa/>,
+  },
+  {
+    path: "dados",
+    element: <Dados2/>,
   },
 ]);

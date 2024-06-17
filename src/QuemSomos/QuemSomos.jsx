@@ -108,7 +108,7 @@ export const QuemSomos = () => {
       <div className="flex flex-col sm:flex-row items-center justify-center pt-[5.5rem]">
       <div className="pb-[6rem] sm:pb-0"> 
             <div className="ml-[3rem] mr-[3rem] shadow-2xl flex flex-col bg-primary-blue h-[30rem] w-[21rem] rounded-[2rem] justify-center items-center">
-              <img src="/img/lauren.png" alt="" className="rounded-full w-[10rem] h-[10rem]" />
+            <img src="/img/lauren.png" alt="" className="rounded-full w-[10rem] h-[10rem]" />
               <div className="font-sans font-medium text-white text-center pt-10">
                 <h1 className="text-[1.3rem] pb-10">Lauren Marçulo</h1>
               <p className="ml-8 mr-8">Aluna na Universidade Estadual do Norte Paraná (UENP)</p>
