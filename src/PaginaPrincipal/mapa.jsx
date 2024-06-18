@@ -23,7 +23,6 @@ const Mapa = () => {
         ></iframe>
      </div>
     </div>
-      <Footer />
     </div>
   );
 };
