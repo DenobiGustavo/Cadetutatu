@@ -15,7 +15,7 @@ const Mapa = () => {
       <div className="h-[90%]">
       <iframe
           title="Meu Mapa"
-          src="https://cadetutatu.uenp.edu.br/"
+          src="https://cadetutatu-mapa.vercel.app"
           width="100%"
           height="100%"
           loading="lazy" 

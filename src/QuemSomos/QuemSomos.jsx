@@ -27,9 +27,10 @@ export const QuemSomos = () => {
            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-center items-center justify-center pt-[11rem]">
             <div className="pb-[6rem] sm:pb-0">
             <div className="ml-[3rem] mr-[3rem] shadow-2xl flex flex-col bg-primary-blue h-[30rem] w-[21rem] rounded-[2rem] justify-center items-center">
-              <img src="/img/tiagao.png" alt="" className="rounded-full w-[10rem] h-[10rem]"/>
+              <img src="/img/tiagao.png" alt="" className="outline text-white rounded-full w-[10rem] h-[10rem]"/>
               <div className="font-sans font-medium text-white text-center pt-10">
-                <h1 className="text-[1.3rem] pb-10">Thiago Adriano Coleti</h1>
+                <h1 className="text-[1.3rem] pb-1">Thiago Adriano Coleti</h1>
+                <h1 className="text-[1.05rem] pb-5">(Ciência da Computação)</h1>
               <p className="ml-8 mr-8">Professor na Universidade Estadual do Norte Paraná (UENP)</p>
               </div>
             </div>
@@ -37,9 +38,10 @@ export const QuemSomos = () => {
 
            <div className="pb-[6rem] sm:pb-0"> 
             <div className="ml-[3rem] mr-[3rem] shadow-2xl flex flex-col bg-primary-blue h-[30rem] w-[21rem] rounded-[2rem] justify-center items-center">
-              <img src="/img/ana.jpg" alt="" className="rounded-full w-[10rem] h-[10rem]" />
+              <img src="/img/ana.jpg" alt="" className="outline text-white rounded-full w-[10rem] h-[10rem]" />
               <div className="font-sans font-medium text-white text-center pt-10">
-                <h1 className="text-[1.3rem] pb-10">Ana Cecília Hoffmann</h1>
+                <h1 className="text-[1.3rem] pb-1">Ana Cecília Hoffmann</h1>
+                <h1 className="text-[1.05rem] pb-5">(Biologia)</h1>
               <p className="ml-8 mr-8">Professora na Universidade Estadual do Norte Paraná (UENP)</p>
               </div>
             </div>
@@ -47,9 +49,10 @@ export const QuemSomos = () => {
            
             <div className="pb-[6rem] sm:pb-0">
             <div className="ml-[3rem] mr-[3rem] shadow-2xl flex flex-col bg-primary-blue h-[30rem] w-[21rem] rounded-[2rem] justify-center items-center">
-              <img src="/img/diego.png" alt="" className="rounded-full w-[10rem] h-[10rem]"/>
+              <img src="/img/diego.png" alt="" className="outline text-white rounded-full w-[10rem] h-[10rem]"/>
               <div className="font-sans font-medium text-white text-center pt-10">
-                <h1 className="text-[1.3rem] pb-10">Diego Pardal</h1>
+                <h1 className="text-[1.3rem] pb-1">Diego Pardal</h1>
+                <h1 className="text-[1.05rem] pb-5">(Biologia)</h1>
               <p className="ml-8 mr-8">Professor na Universidade Estadual do Norte Paraná (UENP)</p>
               </div>
             </div>
@@ -59,10 +62,23 @@ export const QuemSomos = () => {
       <div className="flex flex-col sm:flex-row items-center justify-center pt-[5.5rem]">
             <div className="pb-[6rem] sm:pb-0"> 
             <div className="ml-[3rem] mr-[3rem] shadow-2xl flex flex-col bg-primary-blue h-[30rem] w-[21rem] rounded-[2rem] justify-center items-center">
-              <img src="/img/carla.png" alt="" className="rounded-full w-[10rem] h-[10rem]" />
+              <img src="/img/carla.png" alt="" className="outline text-white rounded-full w-[10rem] h-[10rem]" />
               <div className="font-sans font-medium text-white text-center pt-10">
-                <h1 className="text-[1.3rem] pb-10">Carla Gomes De Araújo</h1>
+                <h1 className="text-[1.3rem] pb-1">Carla Gomes De Araújo</h1>
+                <h1 className="text-[1.05rem] pb-5">(Biologia)</h1>
               <p className="ml-8 mr-8">Professora na Universidade Estadual do Norte Paraná (UENP)</p>
+              </div>
+            </div>
+            </div>
+
+            <div className="pb-[6rem] sm:pb-0"> 
+            <div className="ml-[3rem] mr-[3rem] shadow-2xl flex flex-col bg-primary-blue h-[30rem] w-[21rem] rounded-[2rem] justify-center items-center">
+              <img src="/img/legore.jpeg" alt="" className="rounded-full w-[10rem] h-[10rem]" />
+              <div className="font-sans font-medium text-white text-center pt-10">
+                <h1 className="text-[1.3rem] pb-1">Luiz Fernando Legore</h1>
+              <h1 className="text-[1.05rem] pb-5">(Ciência da Computação)</h1>
+              <p className="ml-8 mr-8">Professor na Universidade Estadual do Norte Paraná (UENP)</p>
+           
               </div>
             </div>
             </div>
@@ -75,9 +91,10 @@ export const QuemSomos = () => {
             <div className="flex flex-col sm:flex-row items-center justify-center pt-[11rem]">
             <div className="pb-[6rem] sm:pb-0">
             <div className="ml-[3rem] mr-[3rem] shadow-2xl flex flex-col bg-primary-blue h-[30rem] w-[21rem] rounded-[2rem] justify-center items-center">
-              <img src="/img/gu.png" alt="" className="rounded-full w-[10rem] h-[10rem]"/>
+              <img src="/img/guu.png" alt="" className="outline text-white rounded-full w-[10rem] h-[10rem]"/>
               <div className="font-sans font-medium text-white text-center pt-10">
-                <h1 className="text-[1.3rem] pb-10">Gustavo Denobi</h1>
+                <h1 className="text-[1.3rem] pb-1">Gustavo Denobi</h1>
+                <h1 className="text-[1.05rem] pb-5">(Ciência da Computação)</h1>
               <p className="ml-8 mr-8">Aluno na Universidade Estadual do Norte Paraná (UENP)</p>
               </div>
             </div>
@@ -85,9 +102,10 @@ export const QuemSomos = () => {
 
            <div className="pb-[6rem] sm:pb-0"> 
             <div className="ml-[3rem] mr-[3rem] shadow-2xl flex flex-col bg-primary-blue h-[30rem] w-[21rem] rounded-[2rem] justify-center items-center">
-              <img src="/img/jo.jpeg" alt="" className="rounded-full w-[10rem] h-[10rem]" />
+              <img src="/img/jo.jpeg" alt="" className="outline text-white rounded-full w-[10rem] h-[10rem]" />
               <div className="font-sans font-medium text-white text-center pt-10">
-                <h1 className="text-[1.3rem] pb-10">Joana Shizu</h1>
+                <h1 className="text-[1.3rem] pb-1">Joana Shizu</h1>
+                <h1 className="text-[1.05rem] pb-5">(Ciência da Computação)</h1>
               <p className="ml-8 mr-8">Aluna na Universidade Estadual do Norte Paraná (UENP)</p>
               </div>
             </div>
@@ -95,9 +113,10 @@ export const QuemSomos = () => {
 
             <div className="pb-[6rem] sm:pb-0"> 
             <div className="ml-[3rem] mr-[3rem] shadow-2xl flex flex-col bg-primary-blue h-[30rem] w-[21rem] rounded-[2rem] justify-center items-center">
-              <img src="/img/leo.jpg" alt="" className="rounded-full w-[10rem] h-[10rem]" />
+              <img src="/img/leo.jpg" alt="" className="outline text-white rounded-full w-[10rem] h-[10rem]" />
               <div className="font-sans font-medium text-white text-center pt-10">
-                <h1 className="text-[1.3rem] pb-10">Leonardo Faria</h1>
+                <h1 className="text-[1.3rem] pb-1">Leonardo Faria</h1>
+                <h1 className="text-[1.05rem] pb-5">(Ciência da Computação)</h1>
               <p className="ml-8 mr-8">Aluno na Universidade Estadual do Norte Paraná (UENP)</p>
               </div>
             </div>
@@ -108,9 +127,10 @@ export const QuemSomos = () => {
       <div className="flex flex-col sm:flex-row items-center justify-center pt-[5.5rem]">
       <div className="pb-[6rem] sm:pb-0"> 
             <div className="ml-[3rem] mr-[3rem] shadow-2xl flex flex-col bg-primary-blue h-[30rem] w-[21rem] rounded-[2rem] justify-center items-center">
-            <img src="/img/lauren.png" alt="" className="rounded-full w-[10rem] h-[10rem]" />
+            <img src="/img/lauren.png" alt="" className="outline text-white rounded-full w-[10rem] h-[10rem]" />
               <div className="font-sans font-medium text-white text-center pt-10">
-                <h1 className="text-[1.3rem] pb-10">Lauren Marçulo</h1>
+                <h1 className="text-[1.3rem] pb-1">Lauren Marçulo</h1>
+                <h1 className="text-[1.05rem] pb-5">(Biologia)</h1>
               <p className="ml-8 mr-8">Aluna na Universidade Estadual do Norte Paraná (UENP)</p>
               </div>
             </div>

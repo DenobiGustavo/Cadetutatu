@@ -41,13 +41,13 @@ const Titulo = () => {
               <a href="/" className="text-primary-blue hover:text-primary-green">Home</a>
             </li>
             <li>
-              <a href="/quem-somos" className="text-primary-blue hover:text-primary-green">Quem Somos</a>
+              <a href="/mapa" className="text-primary-blue hover:text-primary-green">Mapa</a>
             </li>
             <li>
               <a href="/dados" className="text-primary-blue hover:text-primary-green">Dados</a>
             </li>
             <li>
-              <a href="/parceiro" className="text-primary-blue hover:text-primary-green">Seja um Parceiro</a>
+              <a href="/quem-somos" className="text-primary-blue hover:text-primary-green">Quem Somos</a>
             </li>
             <li>
               <a href="/administrativo" className="text-primary-blue hover:text-primary-green">Administrativo</a>
