@@ -1,8 +1,19 @@
 // src/components/Dados.jsx
-import React from 'react';
-
+import React, { useState } from 'react';
+import { imageResolver } from './imageresolver';
 
 const Dados = ({ data = [] }) => {
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  const handleImageClick = (name) => {
+    const imageUrl = imageResolver(name);
+    setSelectedImage(imageUrl);
+  };
+
+  const handleCloseModal = () => {
+    setSelectedImage(null);
+  };
+
   if (!data || data.length === 0) {
     return <div>Nenhum dado disponível</div>;
   }
@@ -28,8 +39,13 @@ const Dados = ({ data = [] }) => {
             <tr key={item.id} className='text-black'>
               <td className="px-2 py-2 border bg-primary-blue text-white font-bold">
                 <div className='grid'>
-                {item.specie.name}
-                <a href={item.specie.image_url} className='p-1 bg-primary-green text-center rounded-lg text-sm'>Veja Imagens</a>
+                  {item.specie.name}
+                  <button 
+                    onClick={() => handleImageClick(item.specie.name)}
+                    className='p-1 bg-primary-green text-center rounded-lg text-sm'
+                  >
+                    Veja Imagens
+                  </button>
                 </div>
               </td>
               <td className="px-2 py-2 border">{item.specie.scientific_name}</td>
@@ -44,6 +60,17 @@ const Dados = ({ data = [] }) => {
           ))}
         </tbody>
       </table>
+
+      {selectedImage && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+          <div className="bg-primary-green p-4 rounded max-w-[40rem] max-h-[40rem]">
+            <img src={selectedImage} alt="Animal" />
+            <button onClick={handleCloseModal} className="mt-4 bg-red-500 text-white p-2 rounded">
+              Fechar
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
