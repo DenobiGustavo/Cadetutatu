@@ -27,11 +27,6 @@ const Header = () => {
                 Quem Somos
               </Link>
             </li>
-            <li className='rounded-lg transition transform hover:scale-110'>
-              <Link to="/administrativo" className="w-[4rem] text-[1.3rem]">
-                Administrativo
-              </Link>
-            </li>
           </ul>
         </nav>
       </div>

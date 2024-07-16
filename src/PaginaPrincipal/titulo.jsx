@@ -49,9 +49,6 @@ const Titulo = () => {
             <li>
               <a href="/quem-somos" className="text-primary-blue hover:text-primary-green">Quem Somos</a>
             </li>
-            <li>
-              <a href="/administrativo" className="text-primary-blue hover:text-primary-green">Administrativo</a>
-            </li>
           </ul>
         </div>
       )}

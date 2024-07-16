@@ -26,7 +26,12 @@ const Dados = ({ data = [] }) => {
         <tbody>
           {data.map((item) => (
             <tr key={item.id} className='text-black'>
-              <td className="px-2 py-2 border bg-primary-blue text-white font-bold">{item.specie.name}</td>
+              <td className="px-2 py-2 border bg-primary-blue text-white font-bold">
+                <div className='grid'>
+                {item.specie.name}
+                <a href={item.specie.image_url} className='p-1 bg-primary-green text-center rounded-lg text-sm'>Veja Imagens</a>
+                </div>
+              </td>
               <td className="px-2 py-2 border">{item.specie.scientific_name}</td>
               <td className="px-2 py-2 border">{item.specie.family}</td>
               <td className="px-2 py-2 border">{item.specie.food}</td>
