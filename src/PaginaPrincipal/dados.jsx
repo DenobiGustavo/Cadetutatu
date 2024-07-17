@@ -20,10 +20,10 @@ const Dados = ({ data = [] }) => {
 
   return (
     <div className="overflow-x-auto">
-      <table className="mr-10 ml-10 mb-10 mt-1 rounded-lg bg-blue-400 text-white text-center outline">
+      <table className="mr-10 ml-10 mb-10 mt-1 bg-blue-400 text-white text-center outline">
         <thead>
           <tr className='bg-primary-blue font-bold'>
-            <th className="px-2 py-2 border">Nome</th>
+            <th className=" px-2 py-2 border">Nome</th>
             <th className="px-2 py-2 border">Nome Científico</th>
             <th className="px-2 py-2 border">Família</th>
             <th className="px-2 py-2 border">Alimentação</th>
@@ -37,7 +37,7 @@ const Dados = ({ data = [] }) => {
         <tbody>
           {data.map((item) => (
             <tr key={item.id} className='text-black'>
-              <td className="px-2 py-2 border bg-primary-blue text-white font-bold">
+              <td className=" px-2 py-2 border bg-primary-blue text-white font-bold ">
                 <div className='grid'>
                   {item.specie.name}
                   <button 
