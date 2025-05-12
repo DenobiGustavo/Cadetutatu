@@ -7,22 +7,22 @@ import Footer from './footer';
 const Mapa = () => {
   return (
     <div className="flex flex-col">
-     <div className='h-screen overflow-hidden'>
-        <div className='sticky'> 
-        <Titulo className="pb-8"/>
-        <Header />
+      <div className='h-screen overflow-hidden'>
+        <div className='sticky'>
+          <Titulo className="pb-8" />
+          <Header />
         </div>
-      <div className="h-[79.3%]">
-      <iframe
-          title="Meu Mapa"
-          src="https://cadetutatu-mapa.vercel.app"
-          width="100%"
-          height="100%"
-          loading="lazy" 
-          className="iframe-map"
-        ></iframe>
-     </div>
-    </div>
+        <div className="h-[79.3%]">
+          <iframe
+            title="Meu Mapa"
+            src="https://newcadetutatu.vercel.app/  "
+            width="100%"
+            height="100%"
+            loading="lazy"
+            className="iframe-map"
+          ></iframe>
+        </div>
+      </div>
     </div>
   );
 };
