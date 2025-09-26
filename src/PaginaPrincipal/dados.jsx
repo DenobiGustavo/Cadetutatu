@@ -23,22 +23,32 @@ const Dados = ({ data = [] }) => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  // Categorias
   const categories = [
     { label: "Todos", value: "Todos" },
-    { label: "Vertebrado", value: "Vertebrado" },
-    { label: "Invertebrado", value: "Invertebrado" },
-    { label: "Planta", value: "Planta" },
+    { label: "Animais", value: "Animal" },
+    { label: "Plantas", value: "Planta" },
   ];
 
+  // Filtro
   let filteredData = data.filter((item) => {
     const division = item.specie.division;
+
     if (filter === "Todos") return true;
-    if (filter === "Planta") return division === "Plantae";
-    if (filter === "Vertebrado") return Number(division) === 1;
-    if (filter === "Invertebrado") return Number(division) === 2;
+
+    if (filter === "Planta") {
+      return division === "Plantae";
+    }
+
+    if (filter === "Animal") {
+      // Animais = Vertebrado (1) ou Invertebrado (2)
+      return Number(division) === 1 || Number(division) === 2;
+    }
+
     return false;
   });
 
+  // Busca
   if (search.trim() !== "") {
     filteredData = filteredData.filter((item) =>
       item.specie.name.toLowerCase().includes(search.toLowerCase())
@@ -104,7 +114,7 @@ const Dados = ({ data = [] }) => {
               key={item.id}
               className="w-full max-w-full bg-[#156AC7] rounded-xl shadow-md overflow-hidden
                          flex flex-col md:flex-row hover:shadow-lg md:hover:scale-105 md:transition-transform md:duration-300
-                         sm:max-w-3xl md:max-w-5xl" // tablet: 3xl, desktop: 5xl
+                         sm:max-w-3xl md:max-w-5xl"
             >
               {imageUrl && (
                 <div className="hidden md:flex md:w-64 md:h-80 flex-shrink-0">
@@ -146,11 +156,15 @@ const Dados = ({ data = [] }) => {
                     {item.specie.family}
                   </p>
                   <p>
-                    <span className="font-bold text-[#86EFAC]">Alimentação:</span>{" "}
+                    <span className="font-bold text-[#86EFAC]">
+                      Alimentação:
+                    </span>{" "}
                     {item.specie.food || "Não informado"}
                   </p>
                   <p>
-                    <span className="font-bold text-[#86EFAC]">Distribuição:</span>{" "}
+                    <span className="font-bold text-[#86EFAC]">
+                      Distribuição:
+                    </span>{" "}
                     {item.specie.geographic_distribution}
                   </p>
                   <p>
@@ -166,7 +180,9 @@ const Dados = ({ data = [] }) => {
                     {item.specie.order || "Não informado"}
                   </p>
                   <p>
-                    <span className="font-bold text-[#86EFAC]">Curiosidades:</span>{" "}
+                    <span className="font-bold text-[#86EFAC]">
+                      Curiosidades:
+                    </span>{" "}
                     {item.specie.curiosities || "Não informado"}
                   </p>
                 </div>
@@ -176,6 +192,7 @@ const Dados = ({ data = [] }) => {
         })
       )}
 
+      {/* Modal de Imagem */}
       {modalImage && (
         <div
           className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 p-4"
