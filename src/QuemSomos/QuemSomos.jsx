@@ -96,7 +96,7 @@ export const QuemSomos = () => {
                   Informações Ocultadas
                 </h1>
                 <p className="text-[1rem] sm:text-[1.2rem]">
-                  Os dados dos pesquisadores e participantes deste projeto foram temporariamente ocultados por questões de privacidade e segurança.
+                  Os dados dos pesquisadores foram omitidos para anonimização em um processo de revisão de artigo científico.
                 </p>
               </div>
             </div>
