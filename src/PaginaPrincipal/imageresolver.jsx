@@ -26,7 +26,6 @@ export function imageResolver(name = "") {
     "Lavadeira-mascarada": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Lavadeira_mascarada.jpg",
     "Quiriquiri": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Falco_sparverius_Flickr.jpg",
     "Guaracavuçu": "https://upload.wikimedia.org/wikipedia/commons/b/be/Cnemotriccus_fuscatus_-_Fuscous_Flycatcher%3B_Bodoquena%2C_Mato_Grosso_do_Sul%2C_Brazil.jpg",
-    "Coleirinho": "https://pt.wikipedia.org/wiki/Ficheiro:Sporophila_caerulescens_-Piraju-SP_-Brazil_-male-8a.jpg",
     "Andorinha-pequena-de-casa": "https://pt.wikipedia.org/wiki/Ficheiro:Pygochelidon_cyanoleuca_-Capao_do_Leao,_Rio_Grande_do_Sul,_Brazil-8.jpg",
     "Anu-preto": "https://pt.wikipedia.org/wiki/Ficheiro:Anu_preto_130506_cropped.jpg",
     "Falcão-de-coleira": "https://upload.wikimedia.org/wikipedia/commons/2/21/Aplomado_Falcon_portrait.jpg",
