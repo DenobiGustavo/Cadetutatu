@@ -1,0 +1,80 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Admin {
+  id        String   @id @default(uuid())
+  name      String
+  email     String   @unique
+  password  String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+enum Category {
+  ANIMAL
+  PLANTA
+}
+
+enum AnimalType {
+  VERTEBRADO
+  INVERTEBRADO
+}
+
+model Species {
+  id                     String      @id @default(uuid())
+  coordinates            String?
+  iconColor              String?
+  name                   String
+  scientificName         String?
+  knownNames             String?
+  family                 String?
+  food                   String?
+  geographicDistribution String?
+  habitat                String?
+  habits                 String?
+  orderName              String?
+  curiosities            String?
+  imageUrl               String?
+  reference              String?
+  category               Category    @default(ANIMAL)
+  animalType             AnimalType?
+  createdAt              DateTime    @default(now())
+  updatedAt              DateTime    @updatedAt
+}
+
+enum SubmissionStatus {
+  PENDING
+  APPROVED
+  REJECTED
+}
+
+model PhotoSubmission {
+  id          String           @id @default(uuid())
+  animalName  String
+  description String?
+  authorName  String?
+  authorEmail String?
+  imageUrl    String
+  status      SubmissionStatus @default(PENDING)
+  userId      String?
+  user        User?            @relation(fields: [userId], references: [id])
+  createdAt   DateTime         @default(now())
+  updatedAt   DateTime         @updatedAt
+}
+
+model User {
+  id          String            @id @default(uuid())
+  name        String
+  email       String            @unique
+  password    String
+  profession  String?
+  submissions PhotoSubmission[]
+  createdAt   DateTime          @default(now())
+  updatedAt   DateTime          @updatedAt
+}

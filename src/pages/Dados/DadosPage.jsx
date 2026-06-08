@@ -1,9 +1,10 @@
 import React from "react";
-import Header from "./header";
-import Titulo from "./titulo";
-import Footer from "./footer";
+import Header from "../../components/Header/header"
+import Footer from "../../components/Footer/footer"
+import Titulo from "../Home/titulo"
+import dados2 from "./dados2"
 import Dados from "./dados";
-import dados2 from "./dados2";
+
 
 const DadosPage = () => {
   return (

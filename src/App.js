@@ -1,24 +1,9 @@
-import React from 'react';
-import QuemSomos from "./QuemSomos/QuemSomos";
-import { createBrowserRouter } from 'react-router-dom';
-import Home from './PaginaPrincipal/home';
-import Mapa from './PaginaPrincipal/mapa';
-import DadosPage from './PaginaPrincipal/DadosPage';
+import { RouterProvider } from "react-router-dom"
+import { router } from "./routes/AppRoutes"
 
-export const router = createBrowserRouter([{
-        path: "/",
-        element: < Home / >
-    },
-    {
-        path: "quem-somos",
-        element: < QuemSomos / > ,
-    },
-    {
-        path: "mapa",
-        element: < Mapa / > ,
-    },
-    {
-        path: "dados",
-        element: < DadosPage / > ,
-    },
-]);
+function App() {
+    return <RouterProvider router = { router }
+    />
+}
+
+export default App

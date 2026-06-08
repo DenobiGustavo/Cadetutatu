@@ -1,7 +1,8 @@
 import React from "react";
-import Header from '../PaginaPrincipal/header';
-import Titulo from '../PaginaPrincipal/titulo';
-import Footer from "../PaginaPrincipal/footer";
+import Header from "../../components/Header/header"
+import Footer from "../../components/Footer/footer"
+import Titulo from "../Home/titulo"
+
 
 export const QuemSomos = () => {
 

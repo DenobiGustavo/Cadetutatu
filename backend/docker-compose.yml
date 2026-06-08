@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: cadetutatu-postgres
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123456
+      POSTGRES_DB: cadetutatu
+    ports:
+      - "5432:5432"
+    volumes:
+      - cadetutatu_pgdata:/var/lib/postgresql/data
+
+volumes:
+  cadetutatu_pgdata:

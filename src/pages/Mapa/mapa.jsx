@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Header from './header';
-import Titulo from './titulo';
+import Header from "../../components/Header/header"
+import Titulo from '../Home/titulo';
 import { ArrowLeft } from "lucide-react"; // Ícone da seta
 
 const Mapa = () => {
