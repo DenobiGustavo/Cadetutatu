@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg {
+  padding: 0;
+  margin: 0;
+  z-index: -1;
+  background-image: url(../assets/backgrounds/fundo3.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%; 
+}
+
+.bg1 {
+  padding: 0;
+  margin: 0;
+  z-index: -1;
+  background-image: url(../assets/backgrounds/fundo.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80rem; 
+}
+
+.bg2{
+  padding: 0;
+  margin: 0;
+  z-index: -1;
+  background-image: url(../assets/backgrounds/fundo2.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.iframe-map {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
