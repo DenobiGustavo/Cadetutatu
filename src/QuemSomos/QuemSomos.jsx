@@ -5,7 +5,7 @@ import Footer from "../PaginaPrincipal/footer";
 
 export const QuemSomos = () => {
 
-  const mostrarParticipantes = false; 
+  const mostrarParticipantes = true; 
 
   return (
     <div className="flex flex-col bg overflow-x-hidden">
