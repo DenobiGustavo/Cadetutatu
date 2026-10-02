@@ -1,11 +1,34 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import SiteFooter from "../../components/layout/SiteFooter";
 import SiteHeader from "../../components/layout/SiteHeader";
 import TopBanner from "../../components/layout/TopBanner";
+import SpeciesList from "../species/SpeciesList";
+import { adaptarParaSpeciesList, listarEspeciesPublico } from "../../services/cadetutatuPublico";
 
 export const AboutPage = () => {
 
   const mostrarParticipantes = false; 
+
+  const [especies, setEspecies] = useState([]);
+  const [carregandoEspecies, setCarregandoEspecies] = useState(true);
+  const [erroEspecies, setErroEspecies] = useState(null);
+
+  useEffect(() => {
+    let cancelado = false;
+
+    listarEspeciesPublico()
+      .then((dados) => {
+        if (!cancelado) setEspecies(adaptarParaSpeciesList(dados));
+      })
+      .catch(() => {
+        if (!cancelado) setErroEspecies("Não foi possível carregar o catálogo do Painel Científico agora.");
+      })
+      .finally(() => {
+        if (!cancelado) setCarregandoEspecies(false);
+      });
+
+    return () => { cancelado = true; };
+  }, []);
 
   return (
     <div className="flex flex-col bg overflow-x-hidden">
@@ -100,6 +123,21 @@ export const AboutPage = () => {
                 </p>
               </div>
             </div>
+          )}
+
+          {/* ESPÉCIES CATALOGADAS (dados do Painel Científico) */}
+          <h1 className="font-sans font-bold text-[2rem] sm:text-[3.6rem] md:text-[3rem] text-white text-center pt-[6rem] sm:pt-[11rem] md:pt-[8rem]">
+            Espécies Catalogadas
+          </h1>
+
+          {carregandoEspecies && (
+            <p className="text-white text-center pt-8" role="status">Carregando espécies…</p>
+          )}
+          {erroEspecies && (
+            <p className="text-white text-center pt-8" role="alert">{erroEspecies}</p>
+          )}
+          {!carregandoEspecies && !erroEspecies && (
+            <SpeciesList data={especies} />
           )}
 
           {/* IMAGEM FINAL */}
