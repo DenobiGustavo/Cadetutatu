@@ -7,7 +7,7 @@ import { adaptarParaSpeciesList, listarEspeciesPublico } from "../../services/ca
 
 export const AboutPage = () => {
 
-  const mostrarParticipantes = false; 
+  const mostrarParticipantes = true; 
 
   const [especies, setEspecies] = useState([]);
   const [carregandoEspecies, setCarregandoEspecies] = useState(true);
