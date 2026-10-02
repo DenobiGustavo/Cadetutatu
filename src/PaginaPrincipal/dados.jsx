@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { imageResolver } from "./imageresolver";
 
 const Dados = ({ data = [] }) => {
   const [modalImage, setModalImage] = useState(null);
@@ -7,7 +6,7 @@ const Dados = ({ data = [] }) => {
   const [filter, setFilter] = useState("Todos");
   const [search, setSearch] = useState("");
 
-  const openModal = (imageUrl) => setModalImage(imageUrl);
+  const openModal = (url, credit) => setModalImage({ url, credit });
   const closeModal = () => setModalImage(null);
 
   useEffect(() => {
@@ -105,8 +104,8 @@ const Dados = ({ data = [] }) => {
         </div>
       ) : (
         filteredData.map((item) => {
-          const imageUrl =
-            imageResolver(item.specie.name) || item.specie.image_url;
+          const imageUrl = item.specie.image_url;
+          const imageCredit = item.specie.image_credit;
           const isMobile = windowWidth < 768;
 
           return (
@@ -117,12 +116,22 @@ const Dados = ({ data = [] }) => {
                          sm:max-w-3xl md:max-w-5xl"
             >
               {imageUrl && (
-                <div className="hidden md:flex md:w-64 md:h-80 flex-shrink-0">
+                <div className="hidden md:flex md:w-64 md:h-80 flex-shrink-0 relative">
                   <img
                     src={imageUrl}
                     alt={item.specie.name}
+                    loading="lazy"
                     className="w-full h-full object-cover rounded-l-xl"
                   />
+                  {imageCredit && (
+                    <p
+                      className="absolute bottom-0 left-0 right-0 px-2 py-1 text-[10px] leading-tight
+                                 text-white bg-black bg-opacity-60 rounded-bl-xl line-clamp-2"
+                      title={imageCredit}
+                    >
+                      {imageCredit}
+                    </p>
+                  )}
                 </div>
               )}
 
@@ -137,7 +146,7 @@ const Dados = ({ data = [] }) => {
                   {imageUrl && isMobile && (
                     <button
                       className="px-3 py-1 rounded-lg text-sm text-white bg-[#0CBB68] hover:bg-green-600 transition"
-                      onClick={() => openModal(imageUrl)}
+                      onClick={() => openModal(imageUrl, imageCredit)}
                     >
                       Ver Foto
                     </button>
@@ -200,10 +209,13 @@ const Dados = ({ data = [] }) => {
         >
           <div className="relative max-w-3xl w-full">
             <img
-              src={modalImage}
+              src={modalImage.url}
               alt="Visualização"
               className="w-full h-auto rounded-lg"
             />
+            {modalImage.credit && (
+              <p className="mt-2 text-xs text-gray-200">{modalImage.credit}</p>
+            )}
             <button
               onClick={closeModal}
               className="absolute top-2 right-2 text-white bg-gray-800 bg-opacity-70 rounded-full px-3 py-1 hover:bg-opacity-90 transition"
