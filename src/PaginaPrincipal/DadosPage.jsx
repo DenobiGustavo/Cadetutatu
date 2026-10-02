@@ -1,39 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Header from "./header";
 import Titulo from "./titulo";
 import Footer from "./footer";
 import Dados from "./dados";
-import {
-  listarEspeciesPublico,
-  adaptarParaDados,
-} from "../services/cadetutatuPublico";
+import { useEspeciesPublico } from "../services/useEspeciesPublico";
 
 const DadosPage = () => {
-  const [especies, setEspecies] = useState([]);
-  const [carregando, setCarregando] = useState(true);
-  const [erro, setErro] = useState(false);
-  const [tentativa, setTentativa] = useState(0);
-
-  useEffect(() => {
-    let ativo = true;
-    setCarregando(true);
-    setErro(false);
-
-    listarEspeciesPublico()
-      .then((lista) => {
-        if (ativo) setEspecies(adaptarParaDados(lista));
-      })
-      .catch(() => {
-        if (ativo) setErro(true);
-      })
-      .finally(() => {
-        if (ativo) setCarregando(false);
-      });
-
-    return () => {
-      ativo = false;
-    };
-  }, [tentativa]);
+  const { especies, carregando, erro, tentarNovamente } = useEspeciesPublico();
 
   return (
     <div className="flex flex-col min-h-screen overflow-x-hidden bg">
@@ -62,7 +35,7 @@ const DadosPage = () => {
               </p>
               <button
                 type="button"
-                onClick={() => setTentativa((n) => n + 1)}
+                onClick={tentarNovamente}
                 className="mt-3 px-5 py-2 rounded-lg text-white font-semibold bg-[#156AC7] hover:bg-blue-700 transition"
               >
                 Tentar novamente
