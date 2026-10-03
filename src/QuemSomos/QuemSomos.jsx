@@ -2,14 +2,10 @@ import React from "react";
 import Header from '../PaginaPrincipal/header';
 import Titulo from '../PaginaPrincipal/titulo';
 import Footer from "../PaginaPrincipal/footer";
-import Dados from "../PaginaPrincipal/dados";
-import { useEspeciesPublico } from "../services/useEspeciesPublico";
 
 export const QuemSomos = () => {
 
-  const mostrarParticipantes = true;
-
-  const { especies, carregando, erro, tentarNovamente } = useEspeciesPublico();
+  const mostrarParticipantes = true; 
 
   return (
     <div className="flex flex-col bg overflow-x-hidden">
@@ -105,35 +101,6 @@ export const QuemSomos = () => {
               </div>
             </div>
           )}
-
-          {/* ESPÉCIES CATALOGADAS (dados do Painel Científico) */}
-          <h1 className="font-sans font-bold text-[2rem] sm:text-[3.6rem] md:text-[3rem] text-white text-center pt-[6rem] sm:pt-[11rem] md:pt-[8rem]">
-            Espécies Catalogadas
-          </h1>
-
-          {carregando && (
-            <div className="text-center pt-8 text-white" role="status">
-              <p className="font-semibold">Carregando espécies do Painel Científico…</p>
-              <p className="text-sm opacity-80 mt-1">
-                O primeiro acesso depois de um tempo pode levar até um minuto.
-              </p>
-            </div>
-          )}
-          {erro && !carregando && (
-            <div className="text-center pt-8 text-white" role="alert">
-              <p className="font-semibold">
-                Não foi possível carregar o catálogo agora.
-              </p>
-              <button
-                type="button"
-                onClick={tentarNovamente}
-                className="mt-3 px-5 py-2 rounded-lg text-white font-semibold bg-[#156AC7] hover:bg-blue-700 transition"
-              >
-                Tentar novamente
-              </button>
-            </div>
-          )}
-          {!carregando && !erro && <Dados data={especies} />}
 
           {/* IMAGEM FINAL */}
           <div className="flex items-center justify-center pt-[6rem] sm:pt-[10rem] md:pt-[8rem] pb-[4rem] sm:pb-[7rem]">
