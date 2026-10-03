@@ -107,6 +107,8 @@ const Dados = ({ data = [] }) => {
           const imageUrl = item.specie.image_url;
           const imageCredit = item.specie.image_credit;
           const isMobile = windowWidth < 768;
+          // Habitat e hábitos só fazem sentido para animais.
+          const ehPlanta = item.specie.division === "Plantae";
 
           return (
             <div
@@ -171,14 +173,18 @@ const Dados = ({ data = [] }) => {
                     </span>{" "}
                     {item.specie.geographic_distribution}
                   </p>
-                  <p>
-                    <span className="font-bold text-[#86EFAC]">Habitat:</span>{" "}
-                    {item.specie.habitat || "Não informado"}
-                  </p>
-                  <p>
-                    <span className="font-bold text-[#86EFAC]">Hábitos:</span>{" "}
-                    {item.specie.habits || "Não informado"}
-                  </p>
+                  {!ehPlanta && (
+                    <>
+                      <p>
+                        <span className="font-bold text-[#86EFAC]">Habitat:</span>{" "}
+                        {item.specie.habitat || "Não informado"}
+                      </p>
+                      <p>
+                        <span className="font-bold text-[#86EFAC]">Hábitos:</span>{" "}
+                        {item.specie.habits || "Não informado"}
+                      </p>
+                    </>
+                  )}
                   <p>
                     <span className="font-bold text-[#86EFAC]">Ordem:</span>{" "}
                     {item.specie.order || "Não informado"}
