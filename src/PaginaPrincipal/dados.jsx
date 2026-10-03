@@ -107,6 +107,8 @@ const Dados = ({ data = [] }) => {
           const imageUrl = item.specie.image_url;
           const imageCredit = item.specie.image_credit;
           const isMobile = windowWidth < 768;
+          // Habitat e hábitos só fazem sentido para animais.
+          const ehPlanta = item.specie.division === "Plantae";
 
           return (
             <div
@@ -116,20 +118,23 @@ const Dados = ({ data = [] }) => {
                          sm:max-w-3xl md:max-w-5xl"
             >
               {imageUrl && (
-                <div className="hidden md:flex md:w-64 md:h-80 flex-shrink-0 relative">
-                  <img
-                    src={imageUrl}
-                    alt={item.specie.name}
-                    loading="lazy"
-                    className="w-full h-full object-cover rounded-l-xl"
-                  />
+                <div className="flex flex-col w-full md:w-64 md:h-80 flex-shrink-0 bg-[#0F4C94]">
+                  <button
+                    type="button"
+                    onClick={() => openModal(imageUrl, imageCredit)}
+                    aria-label={`Ampliar foto: ${item.specie.name}`}
+                    className="block w-full h-56 md:h-auto md:flex-1 min-h-0 cursor-zoom-in"
+                  >
+                    <img
+                      src={imageUrl}
+                      alt={item.specie.name}
+                      loading="lazy"
+                      className="w-full h-full object-cover"
+                    />
+                  </button>
                   {imageCredit && (
-                    <p
-                      className="absolute bottom-0 left-0 right-0 px-2 py-1 text-[10px] leading-tight
-                                 text-white bg-black bg-opacity-60 rounded-bl-xl line-clamp-2"
-                      title={imageCredit}
-                    >
-                      {imageCredit}
+                    <p className="px-3 py-2 text-xs leading-snug text-gray-100">
+                      Foto: {imageCredit}
                     </p>
                   )}
                 </div>
@@ -143,14 +148,6 @@ const Dados = ({ data = [] }) => {
                   <h2 className="font-bold text-[#86EFAC] text-lg sm:text-xl">
                     {item.specie.name}
                   </h2>
-                  {imageUrl && isMobile && (
-                    <button
-                      className="px-3 py-1 rounded-lg text-sm text-white bg-[#0CBB68] hover:bg-green-600 transition"
-                      onClick={() => openModal(imageUrl, imageCredit)}
-                    >
-                      Ver Foto
-                    </button>
-                  )}
                 </div>
 
                 <div className="space-y-1 sm:space-y-2">
@@ -176,14 +173,18 @@ const Dados = ({ data = [] }) => {
                     </span>{" "}
                     {item.specie.geographic_distribution}
                   </p>
-                  <p>
-                    <span className="font-bold text-[#86EFAC]">Habitat:</span>{" "}
-                    {item.specie.habitat}
-                  </p>
-                  <p>
-                    <span className="font-bold text-[#86EFAC]">Hábitos:</span>{" "}
-                    {item.specie.habits}
-                  </p>
+                  {!ehPlanta && (
+                    <>
+                      <p>
+                        <span className="font-bold text-[#86EFAC]">Habitat:</span>{" "}
+                        {item.specie.habitat || "Não informado"}
+                      </p>
+                      <p>
+                        <span className="font-bold text-[#86EFAC]">Hábitos:</span>{" "}
+                        {item.specie.habits || "Não informado"}
+                      </p>
+                    </>
+                  )}
                   <p>
                     <span className="font-bold text-[#86EFAC]">Ordem:</span>{" "}
                     {item.specie.order || "Não informado"}
