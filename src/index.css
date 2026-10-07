@@ -39,3 +39,52 @@
   padding: 0;
   border: none;
 }
+
+/* ===== Acessibilidade (WCAG 2.1) ===== */
+
+/* Link "Pular para o conteudo": so aparece quando recebe foco do teclado */
+.pular-para-conteudo {
+  position: fixed;
+  top: 8px;
+  left: 8px;
+  z-index: 10000;
+  padding: 10px 16px;
+  background: #156AC7;
+  color: #fff;
+  border-radius: 6px;
+  font-weight: 600;
+  transform: translateY(-200%);
+}
+
+.pular-para-conteudo:focus {
+  transform: translateY(0);
+}
+
+/* Foco visivel em tudo que e interativo (2.4.7) */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid #FFD700;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 5px #000;
+}
+
+/* O destino do "pular" recebe foco por script, sem contorno */
+main:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Quem pede menos movimento nao ve as animacoes (2.3.3) */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

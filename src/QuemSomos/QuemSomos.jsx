@@ -14,7 +14,7 @@ export const QuemSomos = () => {
         <Header />
       </div>
 
-      <div className="px-4 sm:px-0">
+      <main id="conteudo" tabIndex={-1} className="px-4 sm:px-0">
         <div className="flex flex-col items-center">
 
           {/* BLOCO PRINCIPAL */}
@@ -42,9 +42,9 @@ export const QuemSomos = () => {
           {mostrarParticipantes ? (
             <>
               {/* PROFESSORES */}
-              <h1 className="font-sans font-bold text-[2rem] sm:text-[3.6rem] md:text-[3rem] text-white text-center pt-[6rem] sm:pt-[11rem] md:pt-[8rem]">
+              <h2 className="font-sans font-bold text-[2rem] sm:text-[3.6rem] md:text-[3rem] text-white text-center pt-[6rem] sm:pt-[11rem] md:pt-[8rem]">
                 Professores Pesquisadores
-              </h1>
+              </h2>
 
               <div className="flex flex-col sm:flex-row sm:flex-wrap items-center justify-center gap-8 pt-[6rem] sm:pt-[11rem] md:pt-[8rem]">
                 {[
@@ -55,10 +55,10 @@ export const QuemSomos = () => {
                   { nome: "Luiz Fernando Legore", curso: "(Ciência da Computação)", img: "/img/legore.jpeg" },
                 ].map((prof, idx) => (
                   <div key={idx} className="shadow-2xl flex flex-col bg-primary-blue w-full sm:w-[21rem] md:w-[18rem] h-[28rem] md:h-[25rem] rounded-[2rem] justify-center items-center p-6">
-                    <img src={prof.img} alt="" className="rounded-full w-[8rem] h-[8rem] md:w-[9rem] md:h-[9rem]" />
+                    <img src={prof.img} alt={`Foto de ${prof.nome}`} className="rounded-full w-[8rem] h-[8rem] md:w-[9rem] md:h-[9rem]" />
                     <div className="text-white text-center pt-6">
-                      <h1 className="font-bold">{prof.nome}</h1>
-                      <h2>{prof.curso}</h2>
+                      <h3 className="font-bold">{prof.nome}</h3>
+                      <p>{prof.curso}</p>
                       <p>Professor(a) na UENP</p>
                     </div>
                   </div>
@@ -66,9 +66,9 @@ export const QuemSomos = () => {
               </div>
 
               {/* ALUNOS */}
-              <h1 className="font-sans font-bold text-[2rem] sm:text-[3.6rem] md:text-[3rem] text-white text-center pt-[6rem] sm:pt-[11rem] md:pt-[8rem]">
+              <h2 className="font-sans font-bold text-[2rem] sm:text-[3.6rem] md:text-[3rem] text-white text-center pt-[6rem] sm:pt-[11rem] md:pt-[8rem]">
                 Alunos Pesquisadores
-              </h1>
+              </h2>
 
               <div className="flex flex-col sm:flex-row sm:flex-wrap items-center justify-center gap-8 pt-[6rem] sm:pt-[11rem] md:pt-[8rem]">
                 {[
@@ -79,10 +79,10 @@ export const QuemSomos = () => {
                   { nome: "Lauren Marçulo", curso: "(Biologia)", img: "/img/lauren.png" },
                 ].map((aluno, idx) => (
                   <div key={idx} className="shadow-2xl flex flex-col bg-primary-blue w-full sm:w-[21rem] md:w-[18rem] h-[28rem] md:h-[25rem] rounded-[2rem] justify-center items-center p-6">
-                    <img src={aluno.img} alt="" className="rounded-full w-[8rem] h-[8rem] md:w-[9rem] md:h-[9rem]" />
+                    <img src={aluno.img} alt={`Foto de ${aluno.nome}`} className="rounded-full w-[8rem] h-[8rem] md:w-[9rem] md:h-[9rem]" />
                     <div className="text-white text-center pt-6">
-                      <h1 className="font-bold">{aluno.nome}</h1>
-                      <h2>{aluno.curso}</h2>
+                      <h3 className="font-bold">{aluno.nome}</h3>
+                      <p>{aluno.curso}</p>
                       <p>Aluno(a) na UENP</p>
                     </div>
                   </div>
@@ -92,9 +92,9 @@ export const QuemSomos = () => {
           ) : (
             <div className="flex justify-center items-center pt-[6rem] sm:pt-[10rem]">
               <div className="bg-primary-blue text-white shadow-2xl rounded-[2rem] p-8 max-w-[40rem] text-center">
-                <h1 className="font-bold text-[1.5rem] sm:text-[2rem] pb-4">
+                <h2 className="font-bold text-[1.5rem] sm:text-[2rem] pb-4">
                   Informações Ocultadas
-                </h1>
+                </h2>
                 <p className="text-[1rem] sm:text-[1.2rem]">
                   Os dados dos pesquisadores foram omitidos para anonimização em um processo de revisão de artigo científico.
                 </p>
@@ -108,7 +108,7 @@ export const QuemSomos = () => {
           </div>
 
         </div>
-      </div>
+      </main>
 
       <Footer />
     </div>

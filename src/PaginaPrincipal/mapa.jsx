@@ -43,6 +43,8 @@ const Mapa = () => {
 
       {/* Ícone de voltar - só no mobile */}
       <button
+        type="button"
+        aria-label="Voltar para a página inicial"
         onClick={voltarInicio}
         className="absolute top-4 left-4 z-50 md:hidden bg-white p-2 rounded-full shadow-md hover:bg-gray-200"
       >
@@ -50,8 +52,10 @@ const Mapa = () => {
       </button>
 
       {/* Iframe ocupando 100% da tela */}
+      <main className="contents">
       <iframe
-        title="Meu Mapa"
+        id="conteudo"
+        title="Mapa interativo das espécies do CadeTuTatu"
         src="https://newcadetutatu.vercel.app/"
         className={`w-full h-screen md:transition-all md:duration-300 ${
           showTitulo
@@ -60,6 +64,7 @@ const Mapa = () => {
         }`}
         loading="lazy"
       ></iframe>
+      </main>
     </div>
   );
 };

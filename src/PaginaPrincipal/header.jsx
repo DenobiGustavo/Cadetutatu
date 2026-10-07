@@ -1,31 +1,35 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+
+// A pagina atual ganha sublinhado (nao depende so de cor) e aria-current="page" automatico
+const navClasse = ({ isActive }) =>
+  `w-[4rem] text-[1.3rem] ${isActive ? "underline underline-offset-8 decoration-2" : ""}`;
 
 const Header = () => {
   return (
     <header className="hidden sm:flex bg-primary-green text-white font-medium">
       <div className="container mx-auto py-5">
-        <nav>
+        <nav aria-label="Navegação principal">
           <ul className="flex space-x-[9rem] items-center justify-center">
             <li className='rounded-lg transition transform hover:scale-110'>
-              <Link to="/" className="w-[4rem] text-[1.3rem]">
+              <NavLink to="/" end className={navClasse}>
                 Home
-              </Link>
+              </NavLink>
             </li>
             <li className='rounded-lg transition transform hover:scale-110'>
-              <Link to="/mapa" className="w-[4rem] text-[1.3rem]">
+              <NavLink to="/mapa" end className={navClasse}>
                 Mapa
-              </Link>
+              </NavLink>
             </li>
             <li className='rounded-lg transition transform hover:scale-110'>
-              <Link to="/dados" className="w-[4rem] text-[1.3rem]">
+              <NavLink to="/dados" end className={navClasse}>
                 Dados
-              </Link>
+              </NavLink>
             </li>
             <li className='rounded-lg transition transform hover:scale-110'>
-              <Link to="/quem-somos" className="w-[4rem] text-[1.3rem]">
+              <NavLink to="/quem-somos" end className={navClasse}>
                 Quem Somos
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </nav>
