@@ -12,9 +12,9 @@ const Home = () => {
         <Titulo className="pb-8"/>
         <Header/>
         </div>
-      <div className="grid h-4/5">
+      <main id="conteudo" tabIndex={-1} className="grid h-4/5">
       <Body className="items-center justify-items-center flex flex-grow"/>
-     </div>
+     </main>
     </div>
       <Footer />
     </div>

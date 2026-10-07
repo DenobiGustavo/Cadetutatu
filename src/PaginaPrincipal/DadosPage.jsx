@@ -17,7 +17,7 @@ const DadosPage = () => {
       </div>
 
       {/* Conteúdo principal – cresce para empurrar o footer */}
-      <main className="flex-1 px-4 sm:px-0">
+      <main id="conteudo" tabIndex={-1} className="flex-1 px-4 sm:px-0">
         <div className="flex flex-col items-center pt-8 sm:pt-20">
           {carregando && (
             <div className="text-center p-6 text-gray-100 sm:text-base" role="status">
