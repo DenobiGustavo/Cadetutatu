@@ -10,7 +10,10 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100%; 
+  /* Fixo na janela: em paginas longas (Dados tem 162 cards) a imagem era esticada para
+     cobrir a pagina inteira e so um pedaco borrado aparecia, parecendo uma cor lisa. */
+  background-attachment: fixed;
+  height: 100%;
 }
 
 .bg1 {
