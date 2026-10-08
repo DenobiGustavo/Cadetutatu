@@ -7,9 +7,9 @@ const navClasse = ({ isActive }) =>
 
 const Header = () => {
   return (
-    // Verde original da barra (#0CBB68). Texto escuro porque branco sobre esse verde dá 2,5:1
-    // (WCAG pede 4,5:1); preto dá 8,3:1.
-    <header className="hidden sm:flex bg-[#0CBB68] text-black font-medium">
+    // Verde e texto branco originais da barra, por decisao do projeto. Atencao: branco sobre
+    // #0CBB68 dá 2,5:1 (a WCAG 1.4.3 pede 4,5:1); preto daria 8,3:1.
+    <header className="hidden sm:flex bg-[#0CBB68] text-white font-medium">
       <div className="container mx-auto py-5">
         <nav aria-label="Navegação principal">
           <ul className="flex space-x-[9rem] items-center justify-center">
